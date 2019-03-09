@@ -28,12 +28,14 @@ To set up the development environment:
 from wsgiref.simple_server import make_server
 from pyramid.config import Configurator
 from pyramid.response import Response
+
 import json
 import random
 import string
 
 def get_confirmation_number():
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
+
 
 def flights(request):
     with open('flights.json') as f:

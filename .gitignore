@@ -90,6 +90,11 @@ ENV/
 env.bak/
 venv.bak/
 
+#node_modules
+
+node_modules
+
+
 # Spyder project settings
 .spyderproject
 .spyproject
