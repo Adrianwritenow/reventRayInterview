@@ -71,6 +71,7 @@ class App extends Component {
       flight: flight,
       show: true,
       number: [`${number}`],
+      confirmation: false,
       errors: false
     });
   }
@@ -169,6 +170,7 @@ class App extends Component {
         return (
       <div className="App">
         <header className="App-header">
+          <h1>NUCLEAR BOOKING</h1>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
 
@@ -205,7 +207,7 @@ class App extends Component {
                  </Col>
                 </Row>
                <p><span className="bold"> Flight length:</span> {length} hours</p>
-               <p className='cost'>Total:<span className='cost'>{flightPicked.cost}</span></p>
+               <p>Total:<span className='cost'>${flightPicked.cost}</span></p>
                <Form onSubmit={e => this.handleSubmit(e)}
                  noValidate
                  validated={validated}
@@ -239,7 +241,12 @@ class App extends Component {
                 <p>{this.state.errorMessage}</p>
               </Alert>
 
+
              </Modal>
+             <Alert dismissible variant="success" show={this.state.confirmation}>
+              <Alert.Heading>All Good!</Alert.Heading>
+              <p>Your flight has been booked! We recommend writting your<br/> confirmation number down!<br/><span className="bold">{this.state.confirmationNum}</span></p>
+            </Alert>
       </div>
     );
     }

@@ -26,7 +26,7 @@ class FlightCard extends Component {
     return (
       <div className="cardWrapper" onClick={(e)=>this.handleSelect(flightItem,flightNumber,e)}>
       <h1>{this.props.from}> {this.props.to}</h1>
-      <h3 className="cost">{this.props.flight.cost}</h3>
+      <h3 className="cost">${this.props.flight.cost}</h3>
       <p>{this.props.airline}</p>
       <p>{newDateD}</p>
       </div>
