@@ -59,12 +59,17 @@ class App extends Component {
       )
   }
 
+
+//HANDLES CLOSING OF MODAL BASED ON FLIGHT NUMBER
   handleClose(number) {
     this.setState({
       show: false,
       number: false,
     });
   }
+
+
+  //HANDLES OPENING OF MODAL BASED ON FLIGHT NUMBER
 
   handleShow(flight, number, e) {
     this.setState({
@@ -75,6 +80,8 @@ class App extends Component {
       errors: false
     });
   }
+
+  //HANDLES SUBMISSION OF  FORM
 
   handleSubmit(event) {
     event.preventDefault();
@@ -126,9 +133,10 @@ class App extends Component {
         }
 
       });
-
-
   }
+
+  // TRACKS CHANGES OF INPUTS IN FORM
+
 
   handleInputChange(event) {
     const target = event.target;
@@ -155,9 +163,9 @@ class App extends Component {
       const arrives = moment(flightPicked.arrives.when);
       const departs = moment(flightPicked.departs.when);
 
+      //TIME IS RE FORMATED
       const newDateA = moment(arrives).format('LLL');
       const newDateD = moment(departs).format('LLL');
-
       const length = arrives.diff(departs, 'hours')
 
       if (error) {
