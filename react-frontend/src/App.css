@@ -8,6 +8,45 @@
   pointer-events: none;
 }
 
+body{
+  background-color: #282c34;
+
+
+}
+
+.flightWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.modal-body>h1{
+text-align: center;
+}
+
+.modal-header>h1{
+  width: 100%;
+  text-align: center;
+}
+
+
+.dropBar{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cardWrapper{
+  width: 250px;
+  background-color: #d4d6ed;
+  padding: 10px;
+  border-radius: 5px;
+  border: #55DBF8 5px solid
+
+}
+
+.price{
+  color:green;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
